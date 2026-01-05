@@ -79,7 +79,7 @@ const GitHubProfile = () => {
           </div>
           
           {/* Navigation Tabs */}
-          <nav className="flex space-x-8 border-t border-gray-800">
+          <nav className="flex space-x-4 md:space-x-8 border-t border-gray-800 overflow-x-auto whitespace-nowrap">
             {[
               { id: 'overview', label: 'Overview' },
               { id: 'repositories', label: 'Repositories', badge: userData.public_repos },
@@ -89,7 +89,7 @@ const GitHubProfile = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`py-4 px-1 border-b-2 font-medium text-sm flex items-center space-x-2 ${
+                className={`py-4 px-1 border-b-2 font-medium text-sm inline-flex items-center space-x-2 ${
                   activeTab === tab.id
                     ? 'border-orange-500 text-white'
                     : 'border-transparent text-gray-400 hover:text-gray-300'
